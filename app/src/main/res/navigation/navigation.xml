@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.shoestoreinventoryapp.view.others.LoginFragment"
+        android:label="Login Screen">
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.shoestoreinventoryapp.view.others.WelcomeFragment"
+        android:label="Welcome Screen">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.example.shoestoreinventoryapp.view.others.InstructionFragment"
+        android:label="Instruction Screen">
+        <action
+            android:id="@+id/action_instructionFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="com.example.shoestoreinventoryapp.view.shoe.ShoeListFragment"
+        android:label="Shoe List Screen">
+        <action
+            android:id="@+id/action_shoeListFragment_to_detailShoeFragment"
+            app:destination="@id/detailShoeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailShoeFragment"
+        android:name="com.example.shoestoreinventoryapp.view.shoe.DetailShoeFragment"
+        android:label="Detail Shoe Screen">
+        <action
+            android:id="@+id/action_detailShoeFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+    </fragment>
+</navigation>
