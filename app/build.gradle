@@ -40,7 +40,6 @@ android {
 
 dependencies {
 
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def nav_version = "2.3.2"
     def lifecycle_version = "2.2.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -52,8 +51,6 @@ dependencies {
     // Kotlin navigation dependencies
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
-
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // LiveData
